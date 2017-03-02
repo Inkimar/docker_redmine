@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+
+  redmine:
+    image: redmine
+    container_name: redmine_official
+    ports:
+      - 10085:3000
+    environment:
+      REDMINE_DB_MYSQL: mariadb_redmine
+      REDMINE_DB_PASSWORD: secr3t
+    depends_on:
+      - mariadb
+    restart: always
+
+  mariadb:
+    image: mariadb
+    container_name: mariadb_redmine
+    environment:
+      MYSQL_DATABASE: redmine
+      MYSQL_ROOT_PASSWORD: secr3t
+    restart: always
