@@ -3,7 +3,7 @@ version: '2'
 services:
 
   redmine:
-    image: redmine
+    image: ink/redmine
     container_name: redmine_official
     ports:
       - 10085:3000
