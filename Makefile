@@ -10,5 +10,8 @@ up:
 down:
 	@docker-compose down
 
-build:
+fetch-themes:
+	./fetch_themes.sh
+
+build: 
 	@docker build --tag=ink/redmine redmine_extended
