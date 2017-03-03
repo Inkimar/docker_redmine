@@ -13,5 +13,8 @@ down:
 fetch-themes:
 	./fetch_themes.sh
 
+fetch-plugins:
+	./fetch_plugins.sh
+
 build: 
 	@docker build --tag=ink/redmine redmine_extended
