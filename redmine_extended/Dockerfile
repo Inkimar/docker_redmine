@@ -15,3 +15,5 @@ RUN unzip  public/themes/master.zip  -d public/themes/
 
 COPY plugins/redmine_agile-1_4_2-light.zip plugins
 RUN unzip  plugins/redmine_agile-1_4_2-light.zip  -d plugins
+# necessary to get the plugins working
+COPY plugins/post-install.sh plugins
