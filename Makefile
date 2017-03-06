@@ -10,11 +10,12 @@ up:
 down:
 	@docker-compose down
 
-fetch-themes:
-	./fetch_themes.sh
-
-fetch-plugins:
-	./fetch_plugins.sh
+fetch:
+	./fetch_themes_and_plugins.sh
 
 build: 
+	./fetch_themes_and_plugins.sh
 	@docker build --tag=ink/redmine redmine_extended
+
+test:
+	xdg-open http://127.0.0.1:10085

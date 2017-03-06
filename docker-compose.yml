@@ -12,6 +12,7 @@ services:
       REDMINE_DB_PASSWORD: secr3t
     depends_on:
       - mariadb
+    #command: /bin/bash -c "/usr/src/redmine/plugins/post-install.sh"
     restart: always
 
   mariadb:
