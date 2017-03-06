@@ -16,9 +16,11 @@ services:
     restart: always
 
   mariadb:
-    image: mariadb
+    image: mariadb:10.1
     container_name: mariadb_redmine
     environment:
       MYSQL_DATABASE: redmine
       MYSQL_ROOT_PASSWORD: secr3t
+    volumes:
+     - ./database:/var/lib/mysql    
     restart: always
