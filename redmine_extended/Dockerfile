@@ -1,6 +1,6 @@
-FROM redmine:3.1.7
+FROM redmine:3.3.2
 
-MAINTAINER "Swedish Natural History Museum" <inkimar@gmail.com>
+MAINTAINER "Swedish Natural History Museum, BIO-unit" <inkimar@gmail.com>
 
 RUN apt-get update -q && apt-get install unzip
 
