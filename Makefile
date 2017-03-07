@@ -13,6 +13,9 @@ down:
 fetch:
 	./fetch_themes_and_plugins.sh
 
+post-install:
+	docker exec redmine_inki bash -c '/usr/src/redmine/plugins/post-install.sh'
+
 build: 
 	./fetch_themes_and_plugins.sh
 	@docker build --tag=ink/redmine redmine_extended
