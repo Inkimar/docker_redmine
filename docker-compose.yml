@@ -4,15 +4,14 @@ services:
 
   redmine:
     image: ink/redmine
-    container_name: redmine_official
+    container_name: redmine_inki
     ports:
-      - 10085:3000
+      - 10095:3000
     environment:
       REDMINE_DB_MYSQL: mariadb_redmine
       REDMINE_DB_PASSWORD: secr3t
     depends_on:
       - mariadb
-    #command: /bin/bash -c "/usr/src/redmine/plugins/post-install.sh"
     restart: always
 
   mariadb:
@@ -22,5 +21,6 @@ services:
       MYSQL_DATABASE: redmine
       MYSQL_ROOT_PASSWORD: secr3t
     volumes:
-     - ./database:/var/lib/mysql    
+      - ./redminedb-init.d:/docker-entrypoint-initdb.d
+    # - ./database:/var/lib/mysql    
     restart: always
