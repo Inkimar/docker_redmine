@@ -5,6 +5,8 @@ It has 3 additional themes + 1 agile-plugin.<p>
 
 NB-1: if you would like to export your redmine-databas from an earlier version to this on, put the sql-file in the redminedb-init.d-directory before you do the 'make' <p>
 
+NB-1.1: if you would like to user the dina-mailserver, you must set the email-credentials in the file redmine_extended/config/configuration.yml before you run 'make build' <p>
+
 NB-2: run the project in this order 
 1. make build
 2. make up
