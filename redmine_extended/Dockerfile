@@ -6,6 +6,9 @@ RUN apt-get update -q && apt-get install unzip
 
 WORKDIR /usr/src/redmine
 
+#mail-configuration
+COPY config/configuration.yml config
+
 # THEMES
 COPY themes/v0.1.tar.gz public/themes
 COPY themes/v0.2.tar.gz public/themes
