@@ -21,4 +21,4 @@ build:
 	@docker build --tag=ink/redmine redmine_extended
 
 test:
-	xdg-open http://127.0.0.1:10085
+	xdg-open http://127.0.0.1:10095
