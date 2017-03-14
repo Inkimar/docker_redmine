@@ -2,3 +2,4 @@
 *.gz
 database.yml
 *~
+*.sql
