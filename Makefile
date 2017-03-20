@@ -22,4 +22,4 @@ build:
 
 test:
 	#xdg-open http://127.0.0.1:10095
-	xdg-open http://issues.dina-web.net
+	xdg-open http://support.dina-web.net
