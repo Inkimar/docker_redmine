@@ -4,7 +4,7 @@ PWD = $(shell pwd)
 
 all: up
 
-up:
+up: build
 	@docker-compose up -d
 
 down:
