@@ -1,6 +1,7 @@
 #!make
 
 PWD = $(shell pwd)
+DOCKERHUB_VER=v0.1
 
 all: up
 
@@ -18,7 +19,10 @@ post-install:
 
 build: 
 	./fetch_themes_and_plugins.sh
-	@docker build --tag=ink/redmine redmine_extended
+	@docker build -t dina/redmine:${DOCKERHUB_VER} redmine_extended
+
+release:
+	docker push dina/redmine:${DOCKERHUB_VER}
 
 test:
 	xdg-open https://support.dina-web.net
